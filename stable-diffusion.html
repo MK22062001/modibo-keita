@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stable Diffusion</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+    <!-- Carousel Start -->
+    <div class="p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                    <img class="img-fluid" src="images/blog/stable-diffusion/carousel-2.png" alt="Image">
+                </button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="1" aria-label="Slide 2">
+                    <img class="img-fluid" src="images/blog/stable-diffusion/carousel-1.png" alt="Image">
+                </button>
+                <button type="button" data-bs-target="#header-carousel" data-bs-slide-to="2" aria-label="Slide 3">
+                    <img class="img-fluid" src="images/blog/stable-diffusion/carousel-3.png" alt="Image">
+                </button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="images/blog/stable-diffusion/carousel-2.png" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h4 class="mb-4 animated zoomIn" style="color: #fff; text-transform: uppercase;">Blog</h4>
+                            <h1 class="display-1 mb-0 animated zoomIn" style="color: #fff;">Stable Diffusion</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="images/blog/stable-diffusion/carousel-1.png" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                          <h4 class="mb-4 animated zoomIn" style="color: #fff; text-transform: uppercase;">Blog</h4>
+                          <h1 class="display-1 mb-0 animated zoomIn" style="color: #fff;">Stable Diffusion</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="images/blog/stable-diffusion/carousel-3.png" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="p-3" style="max-width: 900px;">
+                          <h4 class="mb-4 animated zoomIn" style="color: #fff; text-transform: uppercase;">Blog</h4>
+                          <h1 class="display-1 mb-0 animated zoomIn" style="color: #fff;">Stable Diffusion</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="mb-3" style="color: #D83B01; font-weight: 900; text-align: center; text-transform: uppercase;">Prompt Engineering</h1>
+            <p>La clef pour obtenir des images réussies avec Stable Diffusion, c’est évidemment le texte de description qu’on lui donne au départ (le prompt). Le prompt engineering est l’art de bien écrire cette description pour obtenir les meilleurs résultats possibles.</p>
+            <p>Vous êtes débutant·e dans la génération d'images par IA et le prompt engineering ? Vous vous sentez dépassé·e ?</p>
+            <p>Ne vous inquiétez pas, nous avons tous été à votre place !</p>
+            <p>Écrire des prompts pour Stable Diffusion qui donnent des résultats satisfaisants n'est pas toujours facile. Et quand on débute, ça peut paraître intimidant, voire impossible.</p>
+            <p>C’est pour cela que nous avons préparé ces guides et articles. Vous y trouverez tout ce dont vous avez besoin pour passer de zéro à la création d'images incroyables avec Stable Diffusion et devenir un·e pro du prompt engineering !</p>
+            <p> <strong> <b>Sommaire</b></strong></p>
+            <ul>
+                <li><a href="#ecrire-bons-prompts">Écrire de bons prompts</a></li>
+                <li><a href="#trouver-prompt-image">Trouver le prompt d'une image</a></li>
+                <li><a href="#maitriser-prompts-negatifs">Maîtriser les Prompts Négatifs</a></li>
+                <li><a href="#prompt-weight">Prompt Weight : le poids des mots</a></li>
+                <li><a href="#portraits-realistes">Portraits réalistes</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 blog-h2 blog-h3 ftco-animate">
+            <div class="heading-section text-center ftco-animate">
+              <h1 class="big big-2">Bons Prompts</h1>
+              <h2 class="mb-5" id="ecrire-bons-prompts">Ecrire de bons prompts</h2>
+              <p>La méthode pour composer des descriptions et prompts qui généreronts de belles images avec Stable Diffsuion</p>
+            </div>
+            <h2>Introduction</h2>
+            <p>Stable Diffusion est une technologie d'IA fascinante qui permet de créer des images à partir de descriptions textuelles. Que vous soyez un artiste numérique, un designer ou simplement un curieux, savoir comment formuler des prompts efficaces peut transformer vos créations. Dans ce guide, nous explorerons les meilleures pratiques pour rédiger des prompts qui génèrent des images impressionnantes et fidèles à vos attentes.</p>
+
+            <h2>1. Comprendre Stable Diffusion</h2>
+            <p>Stable Diffusion est un modèle de génération d’images basé sur l’IA, entraîné avec des millions d'exemples de textes et d'images. En fournissant une description textuelle, ou « prompt », à l’IA, vous lui donnez une directive sur ce que vous souhaitez visualiser. Plus votre prompt est précis et détaillé, plus l’image générée sera proche de ce que vous imaginez.</p>
+
+            <h2>2. Langue du Prompt : Anglais vs Français</h2>
+            <p>Bien que Stable Diffusion soit capable de comprendre le français, il a été principalement entraîné avec des descriptions en anglais. Pour des résultats optimaux, il est donc conseillé d’écrire vos prompts en anglais. Vous pouvez utiliser des outils de traduction comme Deepl ou chatGPT pour convertir vos descriptions du français à l'anglais.</p>
+
+            <h2>3. La Structure d’un Bon Prompt</h2>
+            <p>Pour obtenir des images de haute qualité et spécifiquement adaptées à vos besoins, il est crucial de structurer votre prompt correctement. Voici les éléments clés à inclure :</p>
+
+            <ul>
+                <li><strong>Sujet</strong> (obligatoire) : Décrivez clairement le sujet principal de l’image. Plus vous êtes précis, mieux c’est. Par exemple : « Un garçon geek programmant devant un ordinateur ».</li>
+                <li><strong>Média</strong> : Indiquez le type de représentation visuelle souhaité. Cela peut inclure des styles comme la peinture numérique, la photographie, ou la peinture à l'huile. Exemple : « Peinture numérique ».</li>
+                <li><strong>Style</strong> : Définissez le style ou l’ambiance de l’image. Cela peut être un style artistique spécifique ou une atmosphère générale. Exemple : « Anime japonais ».</li>
+                <li><strong>Artiste</strong> : Mentionnez un artiste dont le style vous inspire, si cela peut influencer le rendu. Exemple : « Par Makoto Shinkai et le Studio Ghibli ».</li>
+                <li><strong>Site Web</strong> : Ajouter des sites connus pour leur qualité d’illustration peut aider à orienter le style. Exemple : « Artstation ».</li>
+                <li><strong>Résolution et Qualité</strong> : Indiquez la résolution souhaitée pour l’image. Des mots-clés comme « 4k » ou « 8k » peuvent améliorer la qualité. Exemple : « 8k ».</li>
+                <li><strong>Détails Supplémentaires</strong> : Ajoutez des détails pour peaufiner l’image, comme l’éclairage ou la précision. Exemple : « Hautement détaillé, qualité incroyable ».</li>
+                <li><strong>Couleurs</strong> : Précisez les tonalités ou la palette de couleurs désirées. Exemple : « Couleurs vives ».</li>
+            </ul>
+
+            <h2>4. Exemples de Prompts</h2>
+            <p>Pour mieux comprendre comment ces éléments s’intègrent, voici quelques exemples :</p>
+            <ul>
+                <li><strong>Prompt détaillé</strong> : « Peinture numérique d’un garçon geek qui programme devant un ordinateur, anime japonais, par Makoto Shinkai et le Studio Ghibli, Artstation, 8k, hautement détaillé, qualité incroyable, couleurs vives ».</li>
+                <li><strong>Prompt avec variations</strong> : « Rendu 3D d’un garçon geek qui programme devant un ordinateur, American comics, par Todd McFarlane et le Studio Marvel, DeviantArt, 4k, hautement détaillé, éclairage cinématique, ambiance sombre ».</li>
+            </ul>
+            <p>Ces exemples montrent comment l’ajout de différents mots-clés peut modifier l’apparence et le style de l’image générée.</p>
+
+            <h2>5. Liste de Mots-Clés à Utiliser</h2>
+            <p>Voici quelques mots-clés utiles pour divers aspects de vos prompts :</p>
+            <ul>
+                <li><strong>Média</strong> : Digital painting, Realistic Photography, Oil Painting.</li>
+                <li><strong>Artistes</strong> : John Collier, Greg Rutkowski, Ghibli.</li>
+                <li><strong>Sites Web</strong> : Artstation, Deviant Art.</li>
+                <li><strong>Résolution</strong> : 8k, Unreal Engine.</li>
+                <li><strong>Autres Détails</strong> : Dramatic lighting, Vivid colors.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Créer des prompts efficaces pour Stable Diffusion est une combinaison d’art et de technique. En structurant vos descriptions avec soin et en utilisant les bons mots-clés, vous pouvez obtenir des images qui répondent exactement à vos attentes. N’oubliez pas que Stable Diffusion est flexible et expérimenter avec différentes combinaisons peut mener à des découvertes surprenantes. Amusez-vous et laissez libre cours à votre créativité pour générer des visuels captivants et uniques !</p>
+
+            
+            <div class="heading-section text-center ftco-animate">
+              <h1 class="big big-2">Prompt Image</h1>
+              <h2 class="mb-5" id="trouver-prompt-image">Trouver le prompt d'une image</h2>
+              <p>Comment obtenir le prompt d’une image avec Stable Diffusion</p>
+            </div>
+            <h2>Introduction</h2>
+            <p>Vous avez découvert une image générée par IA qui vous fascine et vous vous demandez quel était le prompt utilisé pour la créer ? Cet article vous guide pour retrouver ou deviner le prompt d'une image générée avec Stable Diffusion. Apprenez à utiliser les métadonnées et des outils d'IA pour découvrir le secret derrière vos images préférées.</p>
+
+            <h2>1. Trouver le Prompt dans les Métadonnées</h2>
+            <p>Les métadonnées d’une image peuvent contenir le prompt original et les paramètres de génération. Voici comment les obtenir :</p>
+            
+            <ul>
+                <li><strong>Utiliser PNG Info dans Automatic1111</strong> : Téléchargez l’image dans l’onglet PNG Info pour voir les métadonnées. Si disponibles, le prompt et les paramètres apparaîtront.</li>
+                <li><strong>PNG Info en ligne</strong> : Utilisez le site [Linaqruf PNG Info] <a href="https://huggingface.co/spaces/Linaqruf/pnginfo"> (https://huggingface.co/spaces/Linaqruf/pnginfo)</a>  pour extraire les métadonnées d’images générées avec différentes interfaces.</li>
+                <li><strong>Utiliser Jimpl</strong> : Un autre outil gratuit pour extraire les métadonnées est [Jimpl] <a href="https://jimpl.com/"> (https://jimpl.com/)</a> Téléchargez l’image et voyez les informations disponibles.</li>
+            </ul>
+            <p>Note : Ces méthodes ne fonctionnent que pour les images générées avec Stable Diffusion et ses interfaces compatibles. Elles ne s'appliquent pas aux images créées avec d’autres IA comme Midjourney ou DALL·E.</p>
+
+            <h2>2. Deviner le Prompt</h2>
+            <p>Quand les métadonnées ne sont pas disponibles, vous pouvez deviner le prompt en utilisant des outils de description d’image :</p>
+            
+            <ul>
+                <li><strong>CLIP Interrogator</strong> : Utilisez un outil comme CLIP Interrogator pour convertir une image en description textuelle. Vous pouvez utiliser [Automatic1111] <a href="https://github.com/pharmapsychotic/clip-interrogator-ext"> (https://github.com/pharmapsychotic/clip-interrogator-ext)</a> ou [Hugging Face] <a href="https://replicate.com/pharmapsychotic/clip-interrogator"> (https://replicate.com/pharmapsychotic/clip-interrogator)</a> .</li>
+                <li><strong>Fonction Describe</strong> : Des outils comme Fooocus et Midjourney offrent des fonctions pour générer des descriptions de l’image. Sur Midjourney, utilisez la commande /describe sur Discord.</li>
+                <li><strong>Image to Prompt avec ChatGPT</strong> : Pour les abonnés ChatGPT Plus, vous pouvez demander à ChatGPT de décrire une image et générer un prompt basé sur cette description.</li>
+            </ul>
+
+            <h2>3. Conseils pour Améliorer les Résultats</h2>
+            <p>Les outils de génération de prompts ne sont pas toujours parfaits. Voici quelques conseils pour affiner les résultats :</p>
+            
+            <ul>
+                <li><strong>Modifiez le Prompt</strong> : N’hésitez pas à ajuster les prompts générés pour mieux correspondre à l’image.</li>
+                <li><strong>Choisissez le Modèle Approprié</strong> : Utilisez un modèle Stable Diffusion adapté au type d’image que vous souhaitez obtenir (anime, photographie, illustration, etc.).</li>
+                <li><strong>Utilisez l'Image comme Prompt</strong> : Vous pouvez aussi utiliser une image comme prompt pour reprendre son style ou ses couleurs.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Découvrir le prompt d’une image générée par IA peut être fascinant et utile pour vos propres créations. En utilisant les métadonnées lorsque disponibles ou en devinant le prompt avec des outils d’IA, vous pouvez mieux comprendre et reproduire les images qui vous inspirent. Explorez ces méthodes et laissez libre cours à votre créativité !</p>
+
+
+            <div class="heading-section text-center ftco-animate">
+              <h1 class="big big-2">Prompts Négatifs</h1>
+              <h2 class="mb-5" id="maitriser-prompts-negatifs">Maîtriser les Prompts Négatifs</h2>
+              <p>Le guide du Negative Prompting pour améliorez la qualité de vos Images avec Stable Diffusion</p>
+            </div>
+            <h2>Introduction</h2>
+            <p>Vous pouvez améliorer la qualité des images générées avec Stable Diffusion grâce à l'utilisation de "Negative Prompts" (prompts négatifs). Ce guide vous aidera à comprendre et à maîtriser cette technique pour contrôler ce que vous ne voulez pas voir dans vos créations.</p>
+
+            <h2>1. Qu'est-ce qu'un Prompt Négatif ?</h2>
+            <p>Un <strong>prompt négatif</strong> est une instruction donnée à l'IA pour indiquer ce que vous ne voulez pas voir dans l'image générée. Contrairement au prompt principal, qui guide le processus de génération, le prompt négatif aide à éliminer certains éléments ou à influencer le style de l'image.</p>
+
+            <h2>2. Comment Utiliser les Prompts Négatifs</h2>
+            <p>Les prompts négatifs permettent de :</p>
+            <ul>
+                <li><strong>Éliminer des éléments indésirables :</strong> Par exemple, supprimer des voitures d'une image de rue en utilisant le prompt négatif "car".</li>
+                <li><strong>Modifier le style :</strong> Pour un style plus photoréaliste, utilisez des prompts négatifs comme "painting" ou "cartoon".</li>
+                <li><strong>Faire des ajustements subtils :</strong> Utilisez "wind" pour corriger des cheveux flottants à cause du vent.</li>
+            </ul>
+
+            <h2>3. Exemples Pratiques</h2>
+            <p>Voici des exemples concrets :</p>
+            <ul>
+                <li><strong>Supprimer des éléments :</strong> En utilisant des prompts négatifs tels que "Flower" pour enlever des fleurs d'une image.</li>
+                <li><strong>Changer de style :</strong> Pour passer d'une image en CG à une image photoréaliste, ajoutez des prompts négatifs comme "cg" ou "computer graphic".</li>
+            </ul>
+
+            <h2>4. Stable Diffusion v2 et le Negative Prompting</h2>
+            <p>Avec l'arrivée de Stable Diffusion v2, les prompts négatifs sont devenus essentiels pour améliorer la qualité des images. L'ajout de quelques prompts négatifs peut considérablement affiner les résultats.</p>
+
+            <h2>5. Les Meilleurs Prompts Négatifs</h2>
+            <p>Voici quelques prompts négatifs universels pour améliorer la qualité :</p>
+            <pre><code>blur, ugly, tiling, bad art, poorly drawn hands, poorly drawn feet, poorly drawn face, out of frame, extra limbs, disfigured, body out of frame, bad anatomy, watermark, signature, cut off, low contrast, underexposed, overexposed, beginner, amateur</code></pre>
+
+            <h2>6. Différents Usages</h2>
+            <p>Pour différents usages, adaptez les prompts négatifs selon le type d'image :</p>
+            <ul>
+                <li><strong>Photorealistic :</strong> <code style="color: #D83B01;">unnatural, unrealistic, cartoon, illustration</code></li>
+                <li><strong>Paintings and Illustrations :</strong> <code style="color: #D83B01;">bad art, photorealistic, realism</code></li>
+                <li><strong>Landscapes :</strong> <code style="color: #D83B01;">plain background, boring, low quality</code></li>
+                <li><strong>Urban Scenes :</strong> <code style="color: #D83B01;">oversaturated, low contrast, creepy</code></li>
+                <li><strong>Portraits :</strong> <code style="color: #D83B01;">disfigured, bad anatomy, cross-eyed</code></li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>Les prompts négatifs sont un outil puissant pour affiner vos créations avec Stable Diffusion. Ils vous permettent de contrôler ce que vous ne voulez pas voir dans vos images et d'influencer le style de manière précise. Continuez à expérimenter et à découvrir comment optimiser vos images grâce à cette technique.</p>
+        
+
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Blog Recents</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/blog/stabled.png);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="stable-diffusion.html">Stable Diffusion</a></h3>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/blog/DORA.png);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="dora-blog.html">Dora</a></h3>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/blog/social-project/_DSC0270.JPG);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="social-project-blog.html">Tous les Cœurs Sont à Ravir : Une Action Sociale Unique au Cœur d’Agadir</a></h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">À savoir</h3>
+              <p>Découvrez l'art du <b>"prompt engineering"</b> pour <b>Stable Diffusion 3</b> avec notre guide exclusif de <a href="https://www.stablediffusion.blog/sd3-prompts-inspirants">20 Prompts Incontournables</a> ! Que vous soyez débutant ou avancé, ces exemples vous aideront à maîtriser la création d'images IA de haute qualité. Plongez dans l'innovation et créez des visuels époustouflants dès aujourd'hui.</p>
+            </div>
+          </div>
+
+
+
+        <div class="row">
+          <div class="col-lg-8 blog-h2 blog-h3 ftco-animate">
+            <div class="heading-section text-center ftco-animate">
+              <h1 class="big big-2">Prompt Weight</h1>
+              <h2 class="mb-5" id="prompt-weight">Prompt Weight : le poids des mots</h2>
+              <p>Utilisez le Prompt weighting pour améliorer vos prompts</p>
+            </div>
+            <h2>Introduction</h2>
+            <p>Stable Diffusion a transformé la création d'images à partir de descriptions textuelles. Pour améliorer encore vos résultats, découvrez le <strong>Prompt Weighting</strong>, une technique simple mais puissante pour contrôler la génération d'images en attribuant différents poids aux mots de votre prompt.</p>
+    
+            <h2>1. Qu'est-ce que le Prompt Weighting ?</h2>
+            <p>Le <strong>Prompt Weighting</strong> permet d'ajuster l'importance des mots dans votre prompt. Cela vous aide à guider l'IA pour qu'elle se concentre davantage sur certains éléments de l'image générée.</p>
+    
+            <h2>2. Comment ça marche ?</h2>
+            <p>Pour modifier le poids d'un mot, vous devez utiliser une syntaxe spécifique dans votre prompt :</p>
+            <ul>
+                <li><code>(mot:poids)</code> : Augmente le poids du mot</li>
+                <li><code>[mot]</code> : Diminue le poids du mot</li>
+            </ul>
+            <p>Par exemple, dans le prompt <code>"Photography of a woman with (blue) eyes"</code>, le mot "blue" est mis en avant, tandis que <code>"Photography of a woman with [blue] eyes"</code> diminue son importance.</p>
+    
+            <h2>3. Exemples Pratiques</h2>
+            <p>Considérons un prompt simple : <code>"Woman, Beach, Pizza"</code>. Sans ajustement de poids, chaque mot a une importance égale. Voici comment les images changent en modifiant le poids :</p>
+            <ul>
+                <li><strong>Sans poids spécifique</strong></li>
+                <li><strong>En augmentant le poids de "Woman"</strong></li>
+                <li><strong>En augmentant le poids de "Beach"</strong></li>
+                <li><strong>En augmentant le poids de "Pizza"</strong></li>
+            </ul>
+            <p>Augmenter le poids de "Beach" montre plus de plage, tandis qu'augmenter le poids de "Pizza" rend la pizza plus grande.</p>
+    
+            <h2>4. Comment l'utiliser dans différentes interfaces ?</h2>
+            <p>Voici comment utiliser le Prompt Weighting dans diverses interfaces :</p>
+            <h3>Automatic1111</h3>
+            <p>Utilisez les parenthèses pour ajuster les poids : <code>(mot:1.5)</code> pour augmenter et <code>[mot]</code> pour diminuer.</p>
+            
+            <h3>Fooocus</h3>
+            <p>Similar à Automatic1111, avec des raccourcis pour ajuster les poids.</p>
+            
+            <h3>ComfyUI</h3>
+            <p>Utilise une syntaxe similaire : <code>(mot:1.1)</code>. Les poids doivent souvent être ajustés plus finement que dans Automatic1111.</p>
+    
+            <h2>Conclusion</h2>
+            <p>Le <strong>Prompt Weighting</strong> est un outil puissant pour affiner vos créations avec Stable Diffusion. En ajustant le poids des mots, vous pouvez influencer considérablement le résultat final. Expérimentez avec différents poids pour explorer tout le potentiel créatif de cette fonctionnalité.</p>
+
+
+            <div class="heading-section text-center ftco-animate">
+              <h1 class="big big-2">Portraits réel</h1>
+              <h2 class="mb-5" id="portraits-realistes">Portraits réalistes</h2>
+              <p>Comment crées des photos réalistes avec SDXL</p>
+            </div>
+            <h2>Introduction</h2>
+            <p>Stable Diffusion XL (SDXL) permet de générer des portraits photoréalistes de haute qualité. Ce guide vous aidera à optimiser vos prompts pour obtenir des photos aussi réalistes que possibles.</p>
+    
+            <h2>1. Optimiser vos Prompts</h2>
+            <p>Pour créer des portraits réalistes avec SDXL, commencez par un prompt simple et clair. Par exemple :</p>
+            <pre><code>Portrait of a blond woman wearing a white shirt</code></pre>
+            <p>Ajoutez le mot <strong>photographic</strong> pour spécifier que vous souhaitez un rendu photographique :</p>
+            <pre><code>Photographic portrait of a blond woman wearing a white shirt</code></pre>
+            <p>Evitez d'utiliser le mot <strong>photorealistic</strong> car il est souvent associé à des images générées et non à des photos réelles.</p>
+    
+            <h2>2. Utiliser les Prompts Négatifs</h2>
+            <p>Pour éviter les styles non photographiques, ajoutez des mots-clés négatifs à votre prompt :</p>
+            <pre><code>illustration, cartoon, anime, 3d render, painting, crayon, sketch, graphite, impressionist, unreal engine</code></pre>
+    
+            <h2>3. Mots Clés pour Photos</h2>
+            <p>Affinez vos résultats en utilisant des mots clés photographiques :</p>
+            <ul>
+                <li><strong>Éclairage :</strong> natural lighting, rim lighting, Rembrandt lighting</li>
+                <li><strong>Appareils photo :</strong> shot with GoPro, Polaroid SX-70, Nikon D750</li>
+                <li><strong>Types de film :</strong> Kodachrome, Fujifilm Superia, Film grain</li>
+                <li><strong>Distance focale :</strong> 15mm, 80mm, 200mm</li>
+                <li><strong>Cadrages :</strong> head and shoulders portrait, Extreme close up, Upper body</li>
+            </ul>
+            <p>Ajoutez également des détails comme l’apparence de la peau :</p>
+            <ul>
+                <li>skin pores, skin blemished, freckles, wrinkles</li>
+            </ul>
+            <p>Spécifiez la direction du regard :</p>
+            <ul>
+                <li>Looking at viewer, Looking away, Looking up</li>
+            </ul>
+            <p>Incorporez des éléments et des props pour plus de réalisme :</p>
+            <ul>
+                <li>holding a coffee mug, wearing ancient jewelry, under a crystal chandelier</li>
+            </ul>
+    
+            <h2>4. Exemples de Prompts Complets</h2>
+            <p>Combinez les éléments pour créer des prompts détaillés :</p>
+            <ul>
+                <li><pre><code>Photo of an african-american man in New York, head and shoulders portrait, shot with Fujifilm Superia, candid street photography</code></pre></li>
+                <li><pre><code>Close up portrait of a female barista, detailed photograph shot on Kodak, amazing skin details</code></pre></li>
+                <li><pre><code>Portrait of a Japanese yoga teacher, Instagram photography, traditional Japanese style room, eyes closed</code></pre></li>
+            </ul>
+    
+            <h2>5. Modèles Photoréalistes</h2>
+            <p>Pour améliorer la qualité photoréaliste, utilisez des modèles spécifiques :</p>
+            <ul>
+                <li><strong>RealVisXL</strong> : Combine plusieurs modèles pour des visages naturels.</li>
+                <li><strong>Realistic Stock Photo</strong> : Efficace pour les portraits serrés.</li>
+                <li><strong>Copax TimeLessXL</strong> : Génère des images réalistes avec une variété de styles.</li>
+                <li><strong>Realities Edge XL</strong> : Améliore les détails et la texture pour un photoréalisme optimal.</li>
+            </ul>
+    
+            <h2>Conclusion</h2>
+            <p>En utilisant les techniques et modèles décrits, vous pouvez créer des portraits photoréalistes impressionnants avec SDXL. Expérimentez avec les différents mots clés et modèles pour obtenir des résultats qui répondent à vos attentes créatives.</p>
+        
+    
+            
+            <div class="about-author d-flex p-4 bg-dark">
+              <div class="bio mr-5">
+                <img src="images/modibo-keita.jpg" alt="Image placeholder" class="img-fluid mb-4">
+              </div>
+              <div class="desc">
+                <h3>Modibo KEITA</h3>
+                <p>Vane est un développeur Full Stack et ingénieur Big Data & IA dont la passion pour l'innovation se reflète non seulement dans ses projets techniques, mais aussi dans sa capacité à partager ses connaissances à travers des blogs captivants. Son expertise, combinée à un talent pour rendre accessibles des sujets complexes, fait de lui une voix essentielle pour ceux qui cherchent à explorer les nouvelles technologies.</p>
+              </div>
+            </div>
+
+
+          </div> <!-- .col-md-8 -->
+          <div class="col-lg-4 sidebar ftco-animate">
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">Blog Recents</h3>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/blog/stabled.png);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="stable-diffusion.html">Stable Diffusion</a></h3>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/blog/DORA.png);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="dora-blog.html">Dora</a></h3>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+                <a class="blog-img mr-4" style="background-image: url(images/blog/social-project/_DSC0270.JPG);"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="social-project-blog.html">Tous les Cœurs Sont à Ravir : Une Action Sociale Unique au Cœur d’Agadir</a></h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <h3 class="heading-sidebar">À savoir</h3>
+              <p>Découvrez l'art du <b>"prompt engineering"</b> pour <b>Stable Diffusion XL</b> avec notre guide exclusif de <a href="https://www.stablediffusion.blog/sdxl-prompts-inspirants">20 Prompts Incontournables</a> ! Que vous soyez débutant ou avancé, ces exemples vous aideront à maîtriser la création d'images IA de haute qualité. Plongez dans l'innovation et créez des visuels époustouflants dès aujourd'hui.</p>
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+
+    <!-- Project Start -->
+    <section class="ftco-section container-xxl py-5">
+      <div class="container">
+        <div class="heading-section text-center ftco-animate">
+          <h1 class="big big-2">Prompts stylés</h1>
+          <h2 class="mb-5" id="portraits-realistes">Des prompts qui ont du style</h2>
+          <p>Une bibliothèque de Styles pour enrichir vos prompts SDXL</p>
+        </div>
+        <p>Stable Diffusion XL (SDXL) a introduit une manière simple d'améliorer la qualité et le style de vos images grâce à des <strong>styles prédéfinis</strong>. Que vous soyez débutant ou utilisateur avancé, ces styles vous permettent de créer des images visuellement captivantes en ajoutant simplement un <em>style</em> à votre prompt de base. Dans cet article, nous vous expliquerons comment utiliser ces styles et vous donnerons des exemples pratiques pour commencer.</p>
+
+        <h2>Pourquoi Utiliser des Styles ?</h2>
+        <p>Les styles sont des ensembles de paramètres qui définissent un type de rendu visuel spécifique. Au lieu de passer du temps à rédiger des prompts longs et complexes, les styles vous permettent d'obtenir des résultats rapides et élégants en quelques clics. Cela vous offre une grande flexibilité, en particulier si vous êtes novice en génération d'images IA.</p>
+
+        <h2>Comment Utiliser les Styles ?</h2>
+        <p>Il existe plusieurs manières d'utiliser les styles dans Stable Diffusion, selon l'interface ou l'outil que vous utilisez. Voici quelques exemples :</p>
+
+        <h3>Utilisation des Styles dans Fooocus</h3>
+        <p>Fooocus intègre nativement des collections de styles comme les <em>Diva Styles</em> et les <em>MK-Styles</em>. Pour les utiliser :</p>
+        <ul>
+            <li>Cliquez sur l'option <strong>Advanced</strong> sous le champ du prompt.</li>
+            <li>Accédez à l'onglet <strong>Styles</strong> pour choisir un ou plusieurs styles à appliquer à votre image.</li>
+        </ul>
+        <div class="style-example">
+            <h4>Exemple de Style : Diva</h4>
+            <img src="images/blog/stable-diffusion/diva-action-figure.png" alt="Exemple de style Diva" class="img-fluid">
+            <p>Prompt : <em>a cat with a hat</em> (un chat avec un chapeau) + Style Diva</p>
+        </div>
+
+        <h3>Utilisation des Styles dans Automatic1111</h3>
+        <p>Avec l'extension <strong>Style Selector XL</strong> pour Automatic1111, vous pouvez facilement accéder à une liste de styles prêts à l'emploi :</p>
+        <ul>
+            <li>Activez l'extension en cochant la case <strong>Enable Style Selector</strong> dans les options de génération <em>img2img</em>.</li>
+            <li>Choisissez un style parmi la liste disponible.</li>
+        </ul>
+        <p><a href="https://github.com/twri/sdxl_prompt_styler">Voir le tutoriel d'installation de l'extension</a></p>
+
+        <h3>Utilisation des Styles dans ComfyUI</h3>
+        <p>Dans ComfyUI, l'extension <strong>SDXL Prompt Styler</strong> vous permet d'appliquer des styles à vos prompts via un <em>node</em> dédié dans votre <strong>workflow</strong>.</p>
+
+        <h2>Collections de Styles Disponibles</h2>
+        <p>Voici quelques collections populaires de styles que vous pouvez utiliser dans vos générations :</p>
+        <ul>
+            <li><strong>Stability AI Styles :</strong> Ce sont les 17 styles originaux proposés lors du lancement de SDXL. Disponibles sur DreamStudio et compatibles avec plusieurs interfaces.</li>
+            <li><strong>Diva Styles :</strong> Une collection visuellement percutante qui ajoute une touche de sophistication à vos images.</li>
+            <li><strong>MK-Styles :</strong> Connu pour des rendus dynamiques et colorés, parfait pour des créations vibrantes.</li>
+        </ul>
+
+        <h2>Diffusion rapide Stable XL sur TPU v5e ⚡</h2>
+        <p>Vous souhaitez réaliser des inférences rapides et efficaces avec Stable Diffusion XL ? Grâce à Google Cloud TPU v5e, vous pouvez générer des images haute qualité (1024×1024) de manière rapide et rentable. Cette technologie est disponible via une démo pratique sur Hugging Face.</p>
+        <p><a href="https://huggingface.co/spaces/google/sdxl" target="_blank">Cliquez ici pour accéder à la démo</a></p>
+
+        <h2>Conclusion</h2>
+        <p>Les styles dans Stable Diffusion XL sont un outil puissant, que vous soyez débutant ou expert en génération d'images. Ils vous permettent d'explorer de nouvelles esthétiques, d'affiner vos créations, et d'accélérer votre flux de travail. N'hésitez pas à explorer ces collections et à expérimenter pour trouver votre style préféré.</p>
+
+        <p>Restez à l'affût des nouvelles collections et mises à jour de styles, car cet article sera régulièrement mis à jour pour inclure de nouvelles découvertes et astuces !</p>
+  
+          <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+              <div class="project-item border rounded h-100 p-4" data-dot="01">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/1.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI 3D Model</p></a>
+                  </div>
+                  <span> <b>Positive prompt :</b> professional 3d model {prompt} . octane render, highly detailed, volumetric, dramatic lighting</span><br>
+                  <span> <b>Negative prompt :</b> ugly, deformed, noisy, low poly, blurry, painting</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="02">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/2.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Analog Film</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> analog film photo {prompt} . faded film, desaturated, 35mm photo, grainy, vignette, vintage, Kodachrome, Lomography, stained, highly detailed, found footage</span><br>
+                  <span><b>Negative prompt :</b> painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="03">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/3.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Anime</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> anime artwork {prompt} . anime style, key visual, vibrant, studio anime, highly detailed</span>
+                  <span><b>Negative prompt :</b> photo, deformed, black and white, realism, disfigured, low contrast</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="04">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/4.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Cinematic</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> cinematic film still {prompt} . shallow depth of field, vignette, highly detailed, high budget, bokeh, cinemascope, moody, epic, gorgeous, film grain, grainy</span>
+                  <span><b>Negative prompt :</b> anime, cartoon, graphic, text, painting, crayon, graphite, abstract, glitch, deformed, mutated, ugly, disfigured</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="05">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/5.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Comic Book</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> comic {prompt} . graphic illustration, comic art, graphic novel art, vibrant, highly detailed</span>
+                  <span><b>Negative prompt :</b> photograph, deformed, glitch, noisy, realistic, stock photo</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="06">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/6.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Craft Clay</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> play-doh style {prompt} . sculpture, clay art, centered composition, Claymation</span>
+                  <span><b>Negative prompt :</b> sloppy, messy, grainy, highly detailed, ultra textured, photo</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="07">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/7.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Digital Art</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> concept art {prompt} . digital artwork, illustrative, painterly, matte painting, highly detailed</span>
+                  <span><b>Negative prompt :</b> photo, photorealistic, realism, ugly</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="08">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/8.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Enhance</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> breathtaking {prompt} . award-winning, professional, highly detailed</span>
+                  <span><b>Negative prompt :</b> ugly, deformed, noisy, blurry, distorted, grainy</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="09">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/9.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Fantasy Art</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> ethereal fantasy concept art of  {prompt} . magnificent, celestial, ethereal, painterly, epic, majestic, magical, fantasy art, cover art, dreamy</span>
+                  <span><b>Negative prompt :</b> photographic, realistic, realism, 35mm film, dslr, cropped, frame, text, deformed, glitch, noise, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, sloppy, duplicate, mutated, black and white</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="10">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/10.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Isometric</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> isometric style {prompt} . vibrant, beautiful, crisp, detailed, ultra detailed, intricate</span>
+                  <span><b>Negative prompt :</b> deformed, mutated, ugly, disfigured, blur, blurry, noise, noisy, realistic, photographic</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="11">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/11.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Line Art</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> line art drawing {prompt} . professional, sleek, modern, minimalist, graphic, line art, vector graphics</span>
+                  <span><b>Negative prompt :</b> anime, photorealistic, 35mm film, deformed, glitch, blurry, noisy, off-center, deformed, cross-eyed, closed eyes, bad anatomy, ugly, disfigured, mutated, realism, realistic, impressionism, expressionism, oil, acrylic</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="12">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/12.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Lowpoly</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> low-poly style {prompt} . low-poly game art, polygon mesh, jagged, blocky, wireframe edges, centered composition</span>
+                  <span><b>Negative prompt :</b> noisy, sloppy, messy, grainy, highly detailed, ultra textured, photo</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="13">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/13.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Neonpunk</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> neonpunk style {prompt} . cyberpunk, vaporwave, neon, vibes, vibrant, stunningly beautiful, crisp, detailed, sleek, ultramodern, magenta highlights, dark purple shadows, high contrast, cinematic, ultra detailed, intricate, professional</span>
+                  <span><b>Negative prompt :</b> painting, drawing, illustration, glitch, deformed, mutated, cross-eyed, ugly, disfigured</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="14">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/14.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Origami</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> origami style {prompt} . paper art, pleated paper, folded, origami art, pleats, cut and fold, centered composition</span>
+                  <span><b>Negative prompt :</b> noisy, sloppy, messy, grainy, highly detailed, ultra textured, photo</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="15">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/15.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Photographic</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> cinematic photo {prompt} . 35mm photograph, film, bokeh, professional, 4k, highly detailed</span>
+                  <span><b>Negative prompt :</b> drawing, painting, crayon, sketch, graphite, impressionist, noisy, blurry, soft, deformed, ugly</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="16">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/16.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Pixel Art</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> pixel-art {prompt} . low-res, blocky, pixel art style, 8-bit graphics</span>
+                  <span><b>Negative prompt :</b> sloppy, messy, blurry, noisy, highly detailed, ultra textured, photo, realistic</span>
+              </div>
+              <div class="project-item border rounded h-100 p-4" data-dot="17">
+                  <div class="position-relative mb-4">
+                      <img class="img-fluid rounded" src="images/blog/stable-diffusion/17.png" alt="">
+                      <a href="" data-lightbox="project"><p style="text-align: center;">Style SDXL : SAI Texture</p></a>
+                  </div>
+                  <span><b>Positive prompt :</b> texture {prompt} top down close-up</span>
+                  <span><b>Negative prompt :</b> ugly, deformed, noisy, blurry</span>
+              </div>
+          </div>
+      </div>
+    </section>
+  <!-- Project End -->
+		
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////
+                                         FOOTER SECTION  
+////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<footer class="ftco-footer ftco-section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">À propos</h2>
+          <p>Passionné par le code et les données, je construis des expériences digitales qui allient performance, fonctionnalité et intelligence.</p>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.instagram.com/convtech_art"><span class="icon-instagram"></span></a></li>
+            <li class="ftco-animate"><a href="www.linkedin.com/in/modibo-keita-671a0727b"><span class="icon-linkedin"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4 ml-md-4">
+          <h2 class="ftco-heading-2">Liens</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Accueil</a></li>
+            <li><a href="index.html#about-section"><span class="icon-long-arrow-right mr-2"></span>À propos</a></li>
+            <li><a href="index.html#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+            <li><a href="index.html#skills-section"><span class="icon-long-arrow-right mr-2"></span>Compétences</a></li>
+            <li><a href="index.html#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projets</a></li>
+            <li><a href="index.html#blog-section"><span class="icon-long-arrow-right mr-2"></span>Blog</a></li>
+            <li><a href="index.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md">
+         <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Services</h2>
+          <ul class="list-unstyled">
+            <li><a href="index.html#design"><span class="icon-long-arrow-right mr-2"></span>Design</a></li>
+            <li><a href="index.html#digital-marketing"><span class="icon-long-arrow-right mr-2"></span>Marketing Digital</a></li>
+            <li><a href="index.html#programming-tech"><span class="icon-long-arrow-right mr-2"></span>Programming & Tech</a></li>
+            <li><a href="index.html#data"><span class="icon-long-arrow-right mr-2"></span>Data</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Vous avez des questions ?</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">Res AILIA TIKIOUINE AGADIR, Morocco</span></li>
+              <li><a href="tel://0689782523"><span class="icon icon-phone"></span><span class="text">+212 689-782523</span></a></li>
+              <li><a href="mailto:modibo.keita.it@gmail.com"><span class="icon icon-envelope"></span><span class="text">modibo.keita.it@gmail.com</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Modibo Keita The digital creator</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+  <!-- Initialisation du carousel -->
+  <script>
+    (function ($) {
+    "use strict";
+
+    // Project carousel
+    $(".project-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 25,
+        loop: true,
+        nav: false,
+        dots: true,
+        dotsData: false,
+        responsive: {
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
+            }
+        }
+    });
+
+    
+})(jQuery);
+  </script>
+  <!-- Bootstrap and Animate.CSS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+  </body>
+</html>
